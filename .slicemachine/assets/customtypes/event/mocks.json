@@ -1,0 +1,85 @@
+{
+  "id": "1e890963-e14a-495a-8b26-f1e75e5f5b1e",
+  "uid": "velit-quia-aut",
+  "type": "event",
+  "data": {
+    "flyer": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+    },
+    "featuredImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+    },
+    "title": "repurpose B2C blockchains",
+    "ticketLink": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    },
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Aute consectetur fugiat adipisicing incididunt commodo do et cupidatat deserunt culpa reprehenderit laborum mollit. Ad commodo dolor aliquip aute. Laborum id excepteur adipisicing.",
+        "spans": []
+      }
+    ],
+    "date": "2021-07-31",
+    "venueName": "enable vertical mindshare",
+    "venueAddress": "aggregate intuitive experiences",
+    "venueLocation": {
+      "latitude": 48.8703712,
+      "longitude": 2.3865198
+    },
+    "startTime": "recontextualize cross-platform markets",
+    "endTime": "monetize back-end e-commerce",
+    "bands": [
+      {
+        "name": "iterate scalable initiatives",
+        "url": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "name": "target sexy infomediaries",
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "name": "unleash frictionless portals",
+        "url": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ],
+    "socialLinks": [
+      {
+        "name": "monetize magnetic e-commerce",
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "name": "e-enable 24/365 e-business",
+        "url": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ]
+  }
+}
