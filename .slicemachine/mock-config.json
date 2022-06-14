@@ -1,5 +1,19 @@
 {
   "_cts": {
-    "event": {}
+    "event": {},
+    "consulting-project": {}
+  },
+  "slices": {
+    "BasicContent": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "ImageGallery": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

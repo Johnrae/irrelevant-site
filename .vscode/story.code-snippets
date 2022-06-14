@@ -1,0 +1,16 @@
+{
+  "Storybook Boilerplate": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "story",
+    "body": [
+      "import React from 'react'",
+      "import { storiesOf } from '@storybook/react'",
+      "import { ${TM_FILENAME_BASE/(.*)\\..+$/$1/} } from './${TM_FILENAME_BASE/(.*)\\..+$/$1/}'",
+      "",
+      "storiesOf('${TM_FILENAME_BASE/(.*)\\..+$/$1/}', module).add('main', () => <${TM_FILENAME_BASE/(.*)\\..+$/$1/} />)",
+
+      "export const Main = () => <${TM_FILENAME_BASE/(.*)\\..+$/$1/} />"
+    ],
+    "description": "Storybook Boilerplate"
+  }
+}

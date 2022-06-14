@@ -1,0 +1,10 @@
+{
+  "Index file": {
+    "scope": "javascript,typescript",
+    "prefix": "ind",
+    "body": [
+      "export { ${TM_DIRECTORY/^.+\\/(.*)$/$1/} } from './${TM_DIRECTORY/^.+\\/(.*)$/$1/}'"
+    ],
+    "description": "Index Boilerplate"
+  }
+}

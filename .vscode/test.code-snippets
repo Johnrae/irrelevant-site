@@ -1,0 +1,19 @@
+{
+  "React Component Test": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "rtest",
+    "body": [
+      "import React from 'react'",
+      "import { render } from '@testing-library/react-native'",
+      "import ${TM_FILENAME_BASE/(.*)\\..+$/$1/} from './${TM_FILENAME_BASE/(.*)\\..+$/$1/}'",
+      "",
+      "describe('${TM_FILENAME_BASE/(.*)\\..+$/$1/}', () => {",
+      "  it('should render', () => {",
+      "    const component = render(<${TM_FILENAME_BASE/(.*)\\..+$/$1/} />)",
+      "    expect(component).toBeDefined()",
+      "  })",
+      "})"
+    ],
+    "description": "A starter component test"
+  }
+}
