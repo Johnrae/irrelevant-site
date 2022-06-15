@@ -1,7 +1,8 @@
 {
   "_cts": {
     "event": {},
-    "consulting-project": {}
+    "consulting-project": {},
+    "band": {}
   },
   "slices": {
     "BasicContent": {

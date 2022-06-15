@@ -1,0 +1,88 @@
+{
+  "id": "4e654459-0c9a-41c4-8834-e0e205bd604a",
+  "uid": "quod-aut-dolor",
+  "type": "band",
+  "data": {
+    "name": "reinvent wireless content",
+    "loacation": "brand holistic e-services",
+    "headerImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop",
+      "full": {
+        "dimensions": {
+          "width": 1440,
+          "height": 900
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=1440&h=900&fit=crop"
+      }
+    },
+    "bio": [
+      {
+        "type": "paragraph",
+        "text": "Laboris deserunt veniam qui commodo mollit reprehenderit exercitation proident est nulla dolor excepteur. Id magna anim culpa do mollit tempor aliqua.",
+        "spans": []
+      }
+    ],
+    "links": [
+      {
+        "url": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "title": "matrix leading-edge action-items"
+      },
+      {
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "title": "facilitate cross-media initiatives"
+      },
+      {
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "title": "disintermediate killer systems"
+      },
+      {
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "title": "exploit efficient bandwidth"
+      },
+      {
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "title": "optimize e-business interfaces"
+      },
+      {
+        "url": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        },
+        "title": "repurpose global infrastructures"
+      }
+    ],
+    "agent": [
+      {
+        "name": "grow B2C niches",
+        "email": "streamline B2C systems"
+      },
+      {
+        "name": "implement 24/365 synergies",
+        "email": "reinvent rich eyeballs"
+      }
+    ]
+  }
+}

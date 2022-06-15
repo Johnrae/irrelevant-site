@@ -1,17 +1,17 @@
 import * as React from 'react'
-import Footer from '../components/Footer/Footer'
+import FixedFooter from '../components/Footer/FixedFooter'
 import Navbar from '../components/Navigation'
 
 interface Props {
   children: React.ReactNode
 }
 
-export default function Layout({ children }: Props) {
+export default function FixedLayout({ children }: Props) {
   return (
     <>
       <Navbar />
       <main>{children}</main>
-      <Footer />
+      <FixedFooter />
     </>
   )
 }

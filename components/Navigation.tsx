@@ -2,9 +2,9 @@ import Link from 'next/Link'
 
 export default function Navigation() {
   return (
-    <div className='flex flex-row justify-between items-center px-8 py-4'>
+    <div className='fixed w-full flex flex-row justify-between items-center px-8 py-4'>
       <div>
-        <Link href={'/'}>irrelevant</Link>
+        <Link href={'/'}>Irrelevant</Link>
       </div>
 
       <div className='flex flex-row space-x-4'>
