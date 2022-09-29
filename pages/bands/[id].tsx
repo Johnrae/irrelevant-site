@@ -2,6 +2,9 @@ import { createClient, prismicLoader } from '../../prismic/client'
 import Image from 'next/image'
 import * as prismicH from '@prismicio/helpers'
 import { BandDocument } from '../../types.generated'
+import { PrismicRichText } from '@prismicio/react'
+import FixedLayout from '../../layouts/FixedLayout'
+import { ReactElement } from 'react'
 
 interface BandProps {
   band: BandDocument
@@ -9,8 +12,7 @@ interface BandProps {
   settings: any
 }
 
-export default function Band({ band, navigation, settings }: any) {
-  console.log(band)
+function Band({ band, navigation, settings }: any) {
   return (
     <div>
       <div className='relative h-screen'>
@@ -20,8 +22,13 @@ export default function Band({ band, navigation, settings }: any) {
           layout='fill'
           loader={prismicLoader}
         />
+        <h1 className='py-8 absolute bottom-0 w-full text-center'>
+          {band.data.name}
+        </h1>
       </div>
-      <h1>{band.data.name}</h1>
+      <div className='px-8 py-20'>
+        <PrismicRichText field={band.data.bio} />
+      </div>
     </div>
   )
 }
@@ -30,7 +37,7 @@ export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
 
   const band = await client.getByUID('band', params.id)
-  console.log('band', band)
+
   return {
     props: {
       band,
@@ -42,10 +49,11 @@ export async function getStaticPaths() {
   const client = createClient()
 
   const bands = await client.getAllByType('band')
-  console.log('bands from paths', bands)
 
   return {
     paths: bands.map((band) => prismicH.asLink(band)),
     fallback: false,
   }
 }
+
+export default Band

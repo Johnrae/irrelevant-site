@@ -10,7 +10,7 @@ export default function Layout({ children }: Props) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className='fill-screen'>{children}</main>
       <Footer />
     </>
   )
