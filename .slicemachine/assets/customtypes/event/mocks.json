@@ -1,6 +1,6 @@
 {
-  "id": "1e890963-e14a-495a-8b26-f1e75e5f5b1e",
-  "uid": "velit-quia-aut",
+  "id": "aff435cb-932b-4bd8-ac04-b4a4fa404748",
+  "uid": "adipisci-earum-occaecati",
   "type": "event",
   "data": {
     "flyer": {
@@ -10,7 +10,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
     },
     "featuredImage": {
       "dimensions": {
@@ -19,9 +19,9 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
     },
-    "title": "repurpose B2C blockchains",
+    "title": "synergize sticky paradigms",
     "ticketLink": {
       "link_type": "media",
       "url": "https://source.unsplash.com/daily"
@@ -29,36 +29,43 @@
     "body": [
       {
         "type": "paragraph",
-        "text": "Aute consectetur fugiat adipisicing incididunt commodo do et cupidatat deserunt culpa reprehenderit laborum mollit. Ad commodo dolor aliquip aute. Laborum id excepteur adipisicing.",
+        "text": "Et laboris sit dolor sint aute. Dolore ut esse aliquip mollit commodo ad incididunt amet. Aliqua ex cillum sunt sunt laboris voluptate anim irure.",
         "spans": []
       }
     ],
-    "date": "2021-07-31",
-    "venueName": "enable vertical mindshare",
-    "venueAddress": "aggregate intuitive experiences",
+    "date": "2017-05-13",
+    "venueName": "syndicate distributed convergence",
+    "venueAddress": "envisioneer best-of-breed portals",
     "venueLocation": {
-      "latitude": 48.8703712,
-      "longitude": 2.3865198
+      "latitude": 48.8841267,
+      "longitude": 2.3300579
     },
-    "startTime": "recontextualize cross-platform markets",
-    "endTime": "monetize back-end e-commerce",
+    "startTime": "visualize granular applications",
+    "endTime": "productize seamless schemas",
     "bands": [
       {
-        "name": "iterate scalable initiatives",
-        "url": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "name": "target sexy infomediaries",
+        "name": "strategize compelling schemas",
         "url": {
           "link_type": "Web",
           "url": "https://prismic.io"
         }
       },
       {
-        "name": "unleash frictionless portals",
+        "name": "leverage world-class eyeballs",
+        "url": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "name": "benchmark enterprise markets",
+        "url": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "name": "extend cross-media functionalities",
         "url": {
           "link_type": "Web",
           "url": "http://twitter.com"
@@ -67,17 +74,24 @@
     ],
     "socialLinks": [
       {
-        "name": "monetize magnetic e-commerce",
+        "name": "productize enterprise supply-chains",
         "url": {
           "link_type": "Web",
           "url": "https://prismic.io"
         }
       },
       {
-        "name": "e-enable 24/365 e-business",
+        "name": "orchestrate robust niches",
         "url": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "name": "monetize turn-key partnerships",
+        "url": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
         }
       }
     ]

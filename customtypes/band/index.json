@@ -101,6 +101,9 @@
           "choices": {
             "image_gallery": {
               "type": "SharedSlice"
+            },
+            "basic_content": {
+              "type": "SharedSlice"
             }
           }
         }

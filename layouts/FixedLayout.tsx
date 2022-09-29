@@ -9,7 +9,7 @@ interface Props {
 export default function FixedLayout({ children }: Props) {
   return (
     <>
-      <Navbar />
+      <Navbar isFixedLayout />
       <main>{children}</main>
       <FixedFooter />
     </>
