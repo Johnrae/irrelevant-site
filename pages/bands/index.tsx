@@ -3,21 +3,21 @@ import { PrismicText } from '@prismicio/react'
 import { createClient } from '../../prismic/client'
 import * as prismicH from '@prismicio/helpers'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import Link from 'next/link'
 
 function BandRow({ band }: { band: BandDocument }) {
   const { data } = band
   return (
-    <div>
-      <div>{data.name}</div>
-      <div>
-        <PrismicText field={data.bio} />
+    <Link href={`/bands/${band.uid}`}>
+      <div className='border-b py-3 cursor-pointer'>
+        <h2>{data.name}</h2>
+        <p>{data.loacation}</p>
       </div>
-    </div>
+    </Link>
   )
 }
 
 export default function BandIndex({ bands, navigation, settings }: any) {
-  console.log(bands)
   return (
     <div>
       {bands.map((band: BandDocument) => (
@@ -31,8 +31,6 @@ export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
 
   const bands = await client.getAllByType('band')
-
-  console.log(bands)
 
   return {
     props: {

@@ -10,7 +10,12 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint)
 
 // Update the routes array to match your project's route structure
 /** @type {prismic.ClientConfig['routes']} **/
-const routes: any[] = []
+const routes: any[] = [
+  {
+    type: 'band',
+    path: '/bands/:uid',
+  },
+]
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
@@ -31,4 +36,17 @@ export const createClient = (config: any = {}) => {
   })
 
   return client
+}
+
+// data from prismic.io returns the image src as an absolute url, so no need to set up the full url on loader....
+export const prismicLoader = ({
+  src,
+  width,
+  quality,
+}: {
+  src: string
+  width: number
+  quality?: number
+}) => {
+  return `${src}?w=${width}&q=${quality || 75}`
 }
