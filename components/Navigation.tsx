@@ -19,6 +19,7 @@ export default function Navigation({ isFixedLayout = false }: NavigationProps) {
           <Link href={'/shop'}>Shop</Link>
         </div>
       </div>
+      {!isFixedLayout && <div className='h-16'></div>}
     </>
   )
 }
