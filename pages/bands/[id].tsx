@@ -60,7 +60,7 @@ function Band({ band, navigation, settings }: BandProps) {
             </div>
           </div>
 
-          <div className='prose text-white'>
+          <div className='prose text-black'>
             <PrismicRichText field={band.data.bio} />
           </div>
         </div>
