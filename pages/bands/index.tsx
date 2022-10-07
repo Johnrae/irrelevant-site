@@ -10,9 +10,9 @@ function BandRow({ band }: { band: BandDocument }) {
   return (
     <div>
       <Link href={`/bands/${band.uid}`}>
-        <div className='border-b py-3 cursor-pointer'>
-          <p>{data.loacation}</p>
-          <h1>{data.name}</h1>
+        <div className='border-t py-3 cursor-pointer border-black'>
+          <p className='mb-10'>{data.loacation}</p>
+          <h1 className='font-semibold'>{data.name}</h1>
         </div>
       </Link>
     </div>

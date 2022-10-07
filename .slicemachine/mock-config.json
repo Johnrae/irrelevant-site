@@ -1,8 +1,29 @@
 {
   "_cts": {
-    "event": {},
-    "consulting-project": {},
-    "band": {}
+    "event": {
+      "body": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "consulting-project": {
+      "summary": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "band": {
+      "bio": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "BasicContent": {

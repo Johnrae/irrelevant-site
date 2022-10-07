@@ -1,99 +1,68 @@
 {
-  "id": "aff435cb-932b-4bd8-ac04-b4a4fa404748",
-  "uid": "adipisci-earum-occaecati",
+  "id": "mock-doc-id",
+  "url": null,
   "type": "event",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
   "data": {
+    "title": "chamber",
+    "date": "2017-03-06",
+    "venueName": "screen",
+    "venueAddress": "paper",
+    "price": "brown",
+    "ages": "tonight",
+    "startTime": "wash",
+    "endTime": "carefully",
+    "ticketLink": "nobody",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Ipsum qui culpa ullamco et ea. Aute sit laborum ea reprehenderit duis exercitation elit non sint.",
+        "spans": []
+      }
+    ],
+    "socialLinks": [
+      {
+        "name": "feet",
+        "url": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ],
+    "bands": [
+      {
+        "name": "but",
+        "url": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ],
     "flyer": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
     },
     "featuredImage": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": "Placeholder image",
+      "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
     },
-    "title": "synergize sticky paradigms",
-    "ticketLink": {
-      "link_type": "media",
-      "url": "https://source.unsplash.com/daily"
-    },
-    "body": [
-      {
-        "type": "paragraph",
-        "text": "Et laboris sit dolor sint aute. Dolore ut esse aliquip mollit commodo ad incididunt amet. Aliqua ex cillum sunt sunt laboris voluptate anim irure.",
-        "spans": []
-      }
-    ],
-    "date": "2017-05-13",
-    "venueName": "syndicate distributed convergence",
-    "venueAddress": "envisioneer best-of-breed portals",
-    "venueLocation": {
-      "latitude": 48.8841267,
-      "longitude": 2.3300579
-    },
-    "startTime": "visualize granular applications",
-    "endTime": "productize seamless schemas",
-    "bands": [
-      {
-        "name": "strategize compelling schemas",
-        "url": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      },
-      {
-        "name": "leverage world-class eyeballs",
-        "url": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "name": "benchmark enterprise markets",
-        "url": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "name": "extend cross-media functionalities",
-        "url": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      }
-    ],
-    "socialLinks": [
-      {
-        "name": "productize enterprise supply-chains",
-        "url": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      },
-      {
-        "name": "orchestrate robust niches",
-        "url": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "name": "monetize turn-key partnerships",
-        "url": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      }
-    ]
+    "slices": []
   }
 }

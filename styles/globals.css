@@ -36,3 +36,14 @@ h3 {
 .fill-screen {
   min-height: calc(100vh - 9rem);
 }
+
+@supports (mix-blend-mode: difference) {
+  .difference {
+    mix-blend-mode: difference;
+  }
+
+  nav.difference * {
+    color: #fff !important;
+    mix-blend-mode: difference;
+  }
+}

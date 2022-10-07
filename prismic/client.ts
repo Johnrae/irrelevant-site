@@ -15,6 +15,10 @@ const routes: any[] = [
     type: 'band',
     path: '/bands/:uid',
   },
+  {
+    type: 'event',
+    path: '/events/:uid',
+  },
 ]
 
 /**

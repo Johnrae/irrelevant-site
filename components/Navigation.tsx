@@ -7,7 +7,7 @@ interface NavigationProps {
 export default function Navigation({ isFixedLayout = false }: NavigationProps) {
   return (
     <>
-      <div className='fixed w-full flex flex-row justify-between items-center px-8 py-4 z-50'>
+      <nav className='difference fixed w-full flex flex-row justify-between items-center px-8 py-4 z-50 text-xl'>
         <div>
           <Link href={'/'}>Irrelevant</Link>
         </div>
@@ -18,7 +18,7 @@ export default function Navigation({ isFixedLayout = false }: NavigationProps) {
           <Link href={'/bands'}>Roster</Link>
           <Link href={'/shop'}>Shop</Link>
         </div>
-      </div>
+      </nav>
       {!isFixedLayout && <div className='h-16'></div>}
     </>
   )

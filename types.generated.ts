@@ -218,28 +218,6 @@ export type ConsultingProjectDocument<Lang extends string = string> = prismicT.P
 /** Content for Event documents */
 interface EventDocumentData {
     /**
-     * Flyer field in *Event*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.flyer
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    flyer: prismicT.ImageField<never>;
-    /**
-     * Featured Image field in *Event*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.featuredImage
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    featuredImage: prismicT.ImageField<never>;
-    /**
      * Title field in *Event*
      *
      * - **Field Type**: Text
@@ -251,28 +229,6 @@ interface EventDocumentData {
      */
     title: prismicT.KeyTextField;
     /**
-     * Ticket Link field in *Event*
-     *
-     * - **Field Type**: Link to Media
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.ticketLink
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    ticketLink: prismicT.LinkToMediaField;
-    /**
-     * Body field in *Event*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.body
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    body: prismicT.RichTextField;
-    /**
      * Date field in *Event*
      *
      * - **Field Type**: Date
@@ -283,17 +239,6 @@ interface EventDocumentData {
      *
      */
     date: prismicT.DateField;
-    /**
-     * Bands field in *Event*
-     *
-     * - **Field Type**: Group
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.bands[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
-     *
-     */
-    bands: prismicT.GroupField<Simplify<EventDocumentDataBandsItem>>;
     /**
      * Venue Name field in *Event*
      *
@@ -317,27 +262,27 @@ interface EventDocumentData {
      */
     venueAddress: prismicT.KeyTextField;
     /**
-     * Venue Location field in *Event*
+     * Price field in *Event*
      *
-     * - **Field Type**: GeoPoint
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: event.venueLocation
+     * - **API ID Path**: event.price
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/geopoint
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    venueLocation: prismicT.GeoPointField;
+    price: prismicT.KeyTextField;
     /**
-     * Social Links field in *Event*
+     * Ages field in *Event*
      *
-     * - **Field Type**: Group
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: event.socialLinks[]
+     * - **API ID Path**: event.ages
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    socialLinks: prismicT.GroupField<Simplify<EventDocumentDataSocialLinksItem>>;
+    ages: prismicT.KeyTextField;
     /**
      * Start Time field in *Event*
      *
@@ -361,6 +306,72 @@ interface EventDocumentData {
      */
     endTime: prismicT.KeyTextField;
     /**
+     * Ticket Link field in *Event*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.ticketLink
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    ticketLink: prismicT.KeyTextField;
+    /**
+     * Body field in *Event*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.body
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    body: prismicT.RichTextField;
+    /**
+     * Social Links field in *Event*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.socialLinks[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    socialLinks: prismicT.GroupField<Simplify<EventDocumentDataSocialLinksItem>>;
+    /**
+     * Bands field in *Event*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.bands[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    bands: prismicT.GroupField<Simplify<EventDocumentDataBandsItem>>;
+    /**
+     * Flyer field in *Event*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.flyer
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    flyer: prismicT.ImageField<never>;
+    /**
+     * Featured Image field in *Event*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.featuredImage
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    featuredImage: prismicT.ImageField<never>;
+    /**
      * Slice Zone field in *Event*
      *
      * - **Field Type**: Slice Zone
@@ -371,32 +382,6 @@ interface EventDocumentData {
      *
      */
     slices: prismicT.SliceZone<EventDocumentDataSlicesSlice>;
-}
-/**
- * Item in Event → Bands
- *
- */
-export interface EventDocumentDataBandsItem {
-    /**
-     * Name field in *Event → Bands*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.bands[].name
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    name: prismicT.KeyTextField;
-    /**
-     * Url field in *Event → Bands*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: event.bands[].url
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    url: prismicT.LinkField;
 }
 /**
  * Item in Event → Social Links
@@ -419,6 +404,32 @@ export interface EventDocumentDataSocialLinksItem {
      * - **Field Type**: Link
      * - **Placeholder**: *None*
      * - **API ID Path**: event.socialLinks[].url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    url: prismicT.LinkField;
+}
+/**
+ * Item in Event → Bands
+ *
+ */
+export interface EventDocumentDataBandsItem {
+    /**
+     * Name field in *Event → Bands*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.bands[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Url field in *Event → Bands*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: event.bands[].url
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
@@ -523,6 +534,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BandDocumentData, BandDocumentDataLinksItem, BandDocumentDataAgentItem, BandDocumentDataSlicesSlice, BandDocument, ConsultingProjectDocumentData, ConsultingProjectDocumentDataSlicesSlice, ConsultingProjectDocument, EventDocumentData, EventDocumentDataBandsItem, EventDocumentDataSocialLinksItem, EventDocumentDataSlicesSlice, EventDocument, AllDocumentTypes, BasicContentSliceDefaultPrimary, BasicContentSliceDefault, BasicContentSliceVariation, BasicContentSlice, ImageGallerySliceDefaultItem, ImageGallerySliceDefault, ImageGallerySliceVariation, ImageGallerySlice };
+        export type { BandDocumentData, BandDocumentDataLinksItem, BandDocumentDataAgentItem, BandDocumentDataSlicesSlice, BandDocument, ConsultingProjectDocumentData, ConsultingProjectDocumentDataSlicesSlice, ConsultingProjectDocument, EventDocumentData, EventDocumentDataSocialLinksItem, EventDocumentDataBandsItem, EventDocumentDataSlicesSlice, EventDocument, AllDocumentTypes, BasicContentSliceDefaultPrimary, BasicContentSliceDefault, BasicContentSliceVariation, BasicContentSlice, ImageGallerySliceDefaultItem, ImageGallerySliceDefault, ImageGallerySliceVariation, ImageGallerySlice };
     }
 }

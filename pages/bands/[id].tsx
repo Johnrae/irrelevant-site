@@ -6,7 +6,6 @@ import { PrismicRichText } from '@prismicio/react'
 import { ReactElement } from 'react'
 import FixedNavbar from '../../layouts/FixedNavbar'
 import Link from 'next/link'
-import { BADFAMILY } from 'dns'
 
 interface BandProps {
   band: BandDocument
@@ -20,17 +19,17 @@ function Band({ band, navigation, settings }: BandProps) {
     <div>
       <div className='relative h-screen'>
         <Image
-          className='object-cover'
-          src={band.data.headerImage.url}
+          className='object-cover grayscale'
+          src={band.data.headerImage.url as string}
           layout='fill'
           loader={prismicLoader}
         />
-        <h1 className='py-8 absolute bottom-0 w-full text-center'>
+        <h1 className='py-8 absolute bottom-0 w-full text-center text-white font-semibold'>
           {band.data.name}
         </h1>
       </div>
       <div className='px-8 py-20'>
-        <div className='flex flex-col-reverse md:flex-row'>
+        <div className='grid lg:grid-cols-2 gap-4'>
           <div className='w-full space-y-8'>
             <div>
               <span className='text-sm'>{band.data.loacation}</span>
@@ -60,8 +59,10 @@ function Band({ band, navigation, settings }: BandProps) {
             </div>
           </div>
 
-          <div className='prose text-black'>
-            <PrismicRichText field={band.data.bio} />
+          <div className='text-black'>
+            <div className='prose w-full'>
+              <PrismicRichText field={band.data.bio} />
+            </div>
           </div>
         </div>
       </div>

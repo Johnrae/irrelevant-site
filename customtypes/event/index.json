@@ -12,22 +12,6 @@
           "placeholder": ""
         }
       },
-      "flyer": {
-        "type": "Image",
-        "config": {
-          "label": "Flyer",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "featuredImage": {
-        "type": "Image",
-        "config": {
-          "label": "Featured Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "title": {
         "type": "Text",
         "config": {
@@ -35,51 +19,11 @@
           "placeholder": ""
         }
       },
-      "ticketLink": {
-        "type": "Link",
-        "config": {
-          "label": "Ticket Link",
-          "placeholder": "",
-          "select": "media"
-        }
-      },
-      "body": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Body",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
       "date": {
         "type": "Date",
         "config": {
           "label": "Date",
           "placeholder": ""
-        }
-      },
-      "bands": {
-        "type": "Group",
-        "config": {
-          "label": "Bands",
-          "fields": {
-            "name": {
-              "type": "Text",
-              "config": {
-                "label": "Name",
-                "placeholder": ""
-              }
-            },
-            "url": {
-              "type": "Link",
-              "config": {
-                "label": "Url",
-                "placeholder": "",
-                "select": null
-              }
-            }
-          }
         }
       },
       "venueName": {
@@ -96,10 +40,48 @@
           "placeholder": ""
         }
       },
-      "venueLocation": {
-        "type": "GeoPoint",
+      "price": {
+        "type": "Text",
         "config": {
-          "label": "Venue Location"
+          "label": "Price",
+          "placeholder": ""
+        }
+      },
+      "ages": {
+        "type": "Text",
+        "config": {
+          "label": "Ages",
+          "placeholder": ""
+        }
+      },
+      "startTime": {
+        "type": "Text",
+        "config": {
+          "label": "Start Time",
+          "placeholder": ""
+        }
+      },
+      "endTime": {
+        "type": "Text",
+        "config": {
+          "label": "End Time",
+          "placeholder": ""
+        }
+      },
+      "ticketLink": {
+        "type": "Text",
+        "config": {
+          "label": "Ticket Link",
+          "placeholder": ""
+        }
+      },
+      "body": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Body",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "socialLinks": {
@@ -125,18 +107,43 @@
           }
         }
       },
-      "startTime": {
-        "type": "Text",
+      "bands": {
+        "type": "Group",
         "config": {
-          "label": "Start Time",
-          "placeholder": ""
+          "label": "Bands",
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": ""
+              }
+            },
+            "url": {
+              "type": "Link",
+              "config": {
+                "label": "Url",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
         }
       },
-      "endTime": {
-        "type": "Text",
+      "flyer": {
+        "type": "Image",
         "config": {
-          "label": "End Time",
-          "placeholder": ""
+          "label": "Flyer",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "featuredImage": {
+        "type": "Image",
+        "config": {
+          "label": "Featured Image",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "slices": {
