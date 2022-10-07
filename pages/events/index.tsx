@@ -41,7 +41,7 @@ export default function EventIndex({ events, navigation, settings }: any) {
   return (
     <div className='px-8 py-4'>
       {events.map((event: EventDocument) => (
-        <EventRow event={event} />
+        <EventRow event={event} key={event.uid} />
       ))}
     </div>
   )

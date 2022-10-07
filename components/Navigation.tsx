@@ -16,7 +16,7 @@ export default function Navigation({ isFixedLayout = false }: NavigationProps) {
           <Link href={'/events'}>Events</Link>
           <Link href={'/consulting'}>Consulting</Link>
           <Link href={'/bands'}>Roster</Link>
-          <Link href={'/shop'}>Shop</Link>
+          <Link href={'https://irrelevantmusic.net/shop'}>Shop</Link>
         </div>
       </nav>
       {!isFixedLayout && <div className='h-16'></div>}

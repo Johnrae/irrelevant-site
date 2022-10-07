@@ -23,7 +23,7 @@ export default function BandIndex({ bands, navigation, settings }: any) {
   return (
     <div className='px-8 py-4 grid grid-cols-2 gap-8'>
       {bands.map((band: BandDocument) => (
-        <BandRow band={band} />
+        <BandRow band={band} key={band.uid} />
       ))}
     </div>
   )

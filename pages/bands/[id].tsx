@@ -23,6 +23,7 @@ function Band({ band, navigation, settings }: BandProps) {
           src={band.data.headerImage.url as string}
           layout='fill'
           loader={prismicLoader}
+          alt='Band Header Image'
         />
         <h1 className='py-8 absolute bottom-0 w-full text-center text-white font-semibold'>
           {band.data.name}
@@ -38,7 +39,11 @@ function Band({ band, navigation, settings }: BandProps) {
             <div>
               <p className='block text-sm pb-4'>Booking Agent</p>
               {band.data.agent.map((agent) => (
-                <a href={`mailto:${agent.email}`} className='text-lg'>
+                <a
+                  href={`mailto:${agent.email}`}
+                  className='text-lg'
+                  key={agent.email}
+                >
                   <span className='block'>{agent.name}</span>
                   <span className='block'>{agent.email}</span>
                 </a>
@@ -52,6 +57,7 @@ function Band({ band, navigation, settings }: BandProps) {
                   // @ts-expect-error
                   href={link.url.link_type === 'Web' && link.url.url}
                   className='text-lg block'
+                  key={link.title}
                 >
                   {link.title}
                 </a>
