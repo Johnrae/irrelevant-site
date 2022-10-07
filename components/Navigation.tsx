@@ -14,7 +14,6 @@ export default function Navigation({ isFixedLayout = false }: NavigationProps) {
 
         <div className='flex flex-row space-x-4'>
           <Link href={'/events'}>Events</Link>
-          <Link href={'/consulting'}>Consulting</Link>
           <Link href={'/bands'}>Roster</Link>
           <Link href={'https://irrelevantmusic.net/shop'}>Shop</Link>
         </div>
