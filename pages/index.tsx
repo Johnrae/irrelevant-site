@@ -1,16 +1,17 @@
 import { ReactElement, useLayoutEffect, useState } from 'react'
-import { NavSpacer } from '../components/NavSpacer'
 import { useFillScreen } from '../hooks/useFillScreen'
+import { NavbarSpacerLayout } from '../layouts/MainLayout'
 import { NextPageWithLayout } from './_app'
 
 const Home: NextPageWithLayout = () => {
-  const { minHeight } = useFillScreen()
+  const { footerHeight } = useFillScreen()
 
   return (
-    <div style={{ minHeight }}>
-      <NavSpacer />
-
-      <div className='py-4 px-8 flex flex-col justify-center'>
+    <div
+      className='flex flex-col justify-center'
+      style={{ minHeight: `calc(100vh - ${footerHeight}px - 4rem)` }}
+    >
+      <div className='py-4 px-8'>
         <div className='grid grid-cols-8'>
           <h1 className='mb-4 col-span-8 md:col-span-6 lg:col-span-5'>
             Irrelevant is a booking/promotions agency, record label, consulting
@@ -28,5 +29,7 @@ const Home: NextPageWithLayout = () => {
     </div>
   )
 }
+
+Home.getLayout = (page) => <NavbarSpacerLayout>{page}</NavbarSpacerLayout>
 
 export default Home
