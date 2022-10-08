@@ -11,11 +11,10 @@ export const useFillScreen = () => {
   }, 100)
 
   useEffect(() => {
+    calculateHeight()
     window.addEventListener('resize', calculateHeight)
     return () => window.removeEventListener('resize', calculateHeight)
   }, [])
-
-  useLayoutEffect(() => calculateHeight(), [])
 
   return { minHeight: `calc(100vh - ${footerHeight}px)`, footerHeight }
 }

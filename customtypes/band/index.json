@@ -36,6 +36,16 @@
               "name": "full",
               "width": 1440,
               "height": 900
+            },
+            {
+              "name": "thumbnail",
+              "width": 600,
+              "height": 400
+            },
+            {
+              "name": "medium",
+              "width": 900,
+              "height": 600
             }
           ]
         }

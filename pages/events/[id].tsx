@@ -3,7 +3,6 @@ import Image from 'next/image'
 import * as prismicH from '@prismicio/helpers'
 import { EventDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
-import Link from 'next/link'
 import { longDate } from '../../utils/time'
 
 interface EventProps {
@@ -12,7 +11,7 @@ interface EventProps {
   settings: any
 }
 
-function Event({ event, navigation, settings }: EventProps) {
+function Event({ event }: EventProps) {
   const { data } = event
 
   return (
@@ -39,16 +38,30 @@ function Event({ event, navigation, settings }: EventProps) {
         </div>
       </div>
 
-      <div className='px-8 py-20'>
-        <div className='mx-auto prose text-black'>
-          <p className=''>{longDate(data.date || '')}</p>
-          <p>
-            {data.startTime} - {data.endTime}
-          </p>
-          <p className=''>{data.venueName}</p>
-          <p className=''>{data.price}</p>
-          <p>{data.ages}</p>
-          <PrismicRichText field={event.data.body} />
+      <div className='px-8 py-20 grid grid-cols-2 gap-4'>
+        <div className='col-span-2 md:col-span-1'>
+          <div className='mx-auto text-black'>
+            <h2 className='mb-4'>{data.title}</h2>
+            <p className=''>{longDate(data.date || '')}</p>
+            <p>
+              {data.startTime} - {data.endTime}
+            </p>
+            <p className=''>{data.venueName}</p>
+            <p>{data.venueAddress}</p>
+            <p className=''>{data.price}</p>
+            <p>{data.ages}</p>
+
+            {data.ticketLink && (
+              <a href={data.ticketLink} target='_blank' rel='noreferrer'>
+                Tickets
+              </a>
+            )}
+          </div>
+        </div>
+        <div className='col-span-2 md:col-span-1'>
+          <div className='prose break-words'>
+            <PrismicRichText field={event.data.body} />
+          </div>
         </div>
       </div>
     </div>

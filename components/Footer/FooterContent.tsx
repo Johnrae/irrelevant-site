@@ -7,7 +7,7 @@ export default function FooterContent() {
       </div>
       <div className='col-span-4 lg:col-span-2 flex flex-col'>
         <span>Kyle Swick</span>
-        <span>kyle@irrelevantmusic.net</span>
+        <span className='break-words'>kyle@irrelevantmusic.net</span>
       </div>
       <div className='col-span-4 lg:col-span-1 flex flex-col'>
         <span>design by</span>

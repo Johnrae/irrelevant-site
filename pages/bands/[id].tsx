@@ -3,8 +3,6 @@ import Image from 'next/image'
 import * as prismicH from '@prismicio/helpers'
 import { BandDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
-import { ReactElement } from 'react'
-import Link from 'next/link'
 
 interface BandProps {
   band: BandDocument
@@ -12,8 +10,7 @@ interface BandProps {
   settings: any
 }
 
-function Band({ band, navigation, settings }: BandProps) {
-  console.log(band.data.links)
+function Band({ band }: BandProps) {
   return (
     <div>
       <div className='relative h-screen'>
@@ -24,12 +21,12 @@ function Band({ band, navigation, settings }: BandProps) {
           loader={prismicLoader}
           alt='Band Header Image'
         />
-        <h1 className='py-8 absolute bottom-0 w-full text-center text-white font-semibold'>
+        <h1 className='py-8 absolute bottom-20 w-full text-center text-white font-semibold'>
           {band.data.name}
         </h1>
       </div>
       <div className='px-8 py-20'>
-        <div className='grid lg:grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           <div className='w-full space-y-8'>
             <div>
               <span className='text-sm'>{band.data.loacation}</span>
@@ -64,10 +61,8 @@ function Band({ band, navigation, settings }: BandProps) {
             </div>
           </div>
 
-          <div className='text-black'>
-            <div className='prose w-full'>
-              <PrismicRichText field={band.data.bio} />
-            </div>
+          <div className='lg:col-span-2 w-full break-words space-y-4'>
+            <PrismicRichText field={band.data.bio} />
           </div>
         </div>
       </div>
