@@ -4,7 +4,6 @@ import * as prismicH from '@prismicio/helpers'
 import { BandDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
 import { ReactElement } from 'react'
-import FixedNavbar from '../../layouts/FixedNavbar'
 import Link from 'next/link'
 
 interface BandProps {
@@ -74,10 +73,6 @@ function Band({ band, navigation, settings }: BandProps) {
       </div>
     </div>
   )
-}
-
-Band.getLayout = (page: ReactElement) => {
-  return <FixedNavbar>{page}</FixedNavbar>
 }
 
 export async function getStaticProps({ params, previewData }: any) {

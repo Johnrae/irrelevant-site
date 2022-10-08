@@ -1,10 +1,19 @@
-import { ReactElement } from 'react'
-import FixedLayout from '../layouts/FixedLayout'
+import { ReactElement, useLayoutEffect, useState } from 'react'
 import { NextPageWithLayout } from './_app'
 
 const Home: NextPageWithLayout = () => {
+  const [minHeight, setMinHeight] = useState('100vh')
+  useLayoutEffect(() => {
+    const footer = document.querySelector('footer')
+    const footerHeight = footer?.clientHeight
+    setMinHeight(`calc(100vh - ${footerHeight}px)`)
+  })
+
   return (
-    <div className='py-4 px-8 min-h-screen flex flex-col justify-center'>
+    <div
+      className='py-4 px-8 min-h-screen flex flex-col justify-center'
+      style={{ minHeight }}
+    >
       <div className='grid grid-cols-8'>
         <h1 className='mb-4 col-span-8 md:col-span-6 lg:col-span-5'>
           Irrelevant is a booking/promotions agency, record label, consulting
@@ -20,10 +29,6 @@ const Home: NextPageWithLayout = () => {
       </div>
     </div>
   )
-}
-
-Home.getLayout = (page: ReactElement) => {
-  return <FixedLayout>{page}</FixedLayout>
 }
 
 export default Home

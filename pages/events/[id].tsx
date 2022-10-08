@@ -3,8 +3,6 @@ import Image from 'next/image'
 import * as prismicH from '@prismicio/helpers'
 import { EventDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
-import { ReactElement } from 'react'
-import FixedNavbar from '../../layouts/FixedNavbar'
 import Link from 'next/link'
 import { longDate } from '../../utils/time'
 
@@ -55,10 +53,6 @@ function Event({ event, navigation, settings }: EventProps) {
       </div>
     </div>
   )
-}
-
-Event.getLayout = (page: ReactElement) => {
-  return <FixedNavbar>{page}</FixedNavbar>
 }
 
 export async function getStaticProps({ params, previewData }: any) {

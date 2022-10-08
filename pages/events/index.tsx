@@ -15,19 +15,29 @@ function EventRow({ event }: { event: EventDocument }) {
           <h2 className='mb-4'>{data.title}</h2>
 
           <div className='grid grid-cols-3 lg:grid-cols-4 gap-4 text-xl'>
-            <div className='space-y-2'>
+            <div className='space-y'>
               <p className=''>{longDate(data.date || '')}</p>
-              <p>
+              <p className='pb-4'>
                 {data.startTime} - {data.endTime}
               </p>
+              {data.ticketLink && (
+                <a
+                  href={data.ticketLink}
+                  target='_blank'
+                  rel='noreferrer'
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Tickets
+                </a>
+              )}
             </div>
 
-            <div className='space-y-2'>
+            <div className='space-y'>
               <p className=''>{data.venueName}</p>
               <p className=''>{data.price}</p>
             </div>
 
-            <div className='space-y-2'>
+            <div className='space-y'>
               <p>{data.ages}</p>
             </div>
           </div>

@@ -1,10 +1,6 @@
 import Link from 'next/link'
 
-interface NavigationProps {
-  isFixedLayout?: boolean
-}
-
-export default function Navigation({ isFixedLayout = false }: NavigationProps) {
+export default function Navigation() {
   return (
     <>
       <nav className='difference fixed w-full flex flex-row justify-between items-center px-8 py-4 z-50 text-xl'>
@@ -18,7 +14,7 @@ export default function Navigation({ isFixedLayout = false }: NavigationProps) {
           <Link href={'https://irrelevantmusic.net/shop'}>Shop</Link>
         </div>
       </nav>
-      {!isFixedLayout && <div className='h-16'></div>}
+      <div className='h-16'></div>
     </>
   )
 }
