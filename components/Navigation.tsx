@@ -11,7 +11,13 @@ export default function Navigation() {
         <div className='flex flex-row space-x-4'>
           <Link href={'/events'}>Events</Link>
           <Link href={'/bands'}>Roster</Link>
-          <Link href={'https://irrelevantmusic.net/shop'}>Shop</Link>
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href={'https://irrelevantmusic.net/shop'}
+          >
+            Shop
+          </a>
         </div>
       </nav>
     </>
