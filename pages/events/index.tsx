@@ -5,6 +5,8 @@ import * as prismicH from '@prismicio/helpers'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Link from 'next/link'
 import { longDate } from '../../utils/time'
+import { NavSpacer } from '../../components/NavSpacer'
+import { useFillScreen } from '../../hooks/useFillScreen'
 
 function EventRow({ event }: { event: EventDocument }) {
   const { data } = event
@@ -48,11 +50,15 @@ function EventRow({ event }: { event: EventDocument }) {
 }
 
 export default function EventIndex({ events, navigation, settings }: any) {
+  const { minHeight } = useFillScreen()
   return (
-    <div className='px-8 py-4'>
-      {events.map((event: EventDocument) => (
-        <EventRow event={event} key={event.uid} />
-      ))}
+    <div style={{ minHeight }}>
+      <NavSpacer />
+      <div className='px-8 py-4'>
+        {events.map((event: EventDocument) => (
+          <EventRow event={event} key={event.uid} />
+        ))}
+      </div>
     </div>
   )
 }

@@ -4,6 +4,8 @@ import { createClient } from '../../prismic/client'
 import * as prismicH from '@prismicio/helpers'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Link from 'next/link'
+import { NavSpacer } from '../../components/NavSpacer'
+import { useFillScreen } from '../../hooks/useFillScreen'
 
 function BandRow({ band }: { band: BandDocument }) {
   const { data } = band
@@ -20,11 +22,15 @@ function BandRow({ band }: { band: BandDocument }) {
 }
 
 export default function BandIndex({ bands, navigation, settings }: any) {
+  const { minHeight } = useFillScreen()
   return (
-    <div className='px-8 py-4 grid grid-cols-2 gap-8'>
-      {bands.map((band: BandDocument) => (
-        <BandRow band={band} key={band.uid} />
-      ))}
+    <div style={{ minHeight }}>
+      <NavSpacer />
+      <div className='px-8 py-4 grid grid-cols-2 gap-8'>
+        {bands.map((band: BandDocument) => (
+          <BandRow band={band} key={band.uid} />
+        ))}
+      </div>
     </div>
   )
 }

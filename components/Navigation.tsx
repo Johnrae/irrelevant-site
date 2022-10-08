@@ -14,7 +14,6 @@ export default function Navigation() {
           <Link href={'https://irrelevantmusic.net/shop'}>Shop</Link>
         </div>
       </nav>
-      <div className='h-16'></div>
     </>
   )
 }
