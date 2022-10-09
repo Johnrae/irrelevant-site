@@ -1,5 +1,5 @@
 import { PrismicRichText } from '@prismicio/react'
-import ImageGallery from './Slices/ImageGallery'
+import ImageGallery from '../slices/ImageGallery'
 import { ImageGallerySlice, BasicContentSlice } from '../types.generated'
 
 interface Props {
