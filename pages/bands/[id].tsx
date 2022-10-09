@@ -29,11 +29,11 @@ function Band({ band }: BandProps) {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           <div className='w-full space-y-8'>
             <div>
-              <span className='text-sm'>{band.data.loacation}</span>
+              <span className='small'>{band.data.loacation}</span>
             </div>
 
             <div>
-              <p className='block text-sm pb-4'>Booking Agent</p>
+              <p className='block small pb-4'>Booking Agent</p>
               {band.data.agent.map((agent) => (
                 <a
                   href={`mailto:${agent.email}`}
@@ -47,7 +47,7 @@ function Band({ band }: BandProps) {
             </div>
 
             <div>
-              <p className='block text-sm pb-4'>Artist Links</p>
+              <p className='block small pb-4'>Artist Links</p>
               {band.data.links.map((link) => {
                 if (!link.url || !link.title) return null
                 return (
