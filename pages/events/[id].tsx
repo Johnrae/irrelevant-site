@@ -24,7 +24,7 @@ function Event({ event }: EventProps) {
           loader={prismicLoader}
           alt='Event Header Image'
         />
-        <div className='absolute text-center w-full bottom-1/2 translate-y-1/2'>
+        <div className='absolute text-center w-full bottom-1/2 translate-y-1/2 px-20 max-w-1/2'>
           <h1 className='py-8 text-center text-white font-semibold drop-shadow-md'>
             {event.data.title}
           </h1>
@@ -38,28 +38,39 @@ function Event({ event }: EventProps) {
         </div>
       </div>
 
-      <div className='px-8 py-20 grid grid-cols-2 gap-4'>
-        <div className='col-span-2 md:col-span-1'>
-          <div className='mx-auto text-black'>
+      <div className='px-8 py-20 grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='col-span-1'>
+          <div className='space-y-4 text-black'>
             <h2 className='mb-4'>{data.title}</h2>
-            <p className=''>{longDate(data.date || '')}</p>
-            <p>
-              {data.startTime} - {data.endTime}
-            </p>
-            <p className=''>{data.venueName}</p>
-            <p>{data.venueAddress}</p>
+            <div>
+              <p className=''>{longDate(data.date || '')}</p>
+              <p>
+                {data.startTime} - {data.endTime}
+              </p>
+            </div>
+            <div>
+              <p className=''>{data.venueName}</p>
+              <p>{data.venueAddress}</p>
+            </div>
             <p className=''>{data.price}</p>
             <p>{data.ages}</p>
 
             {data.ticketLink && (
-              <a href={data.ticketLink} target='_blank' rel='noreferrer'>
-                Tickets
-              </a>
+              <div>
+                <a
+                  href={data.ticketLink}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='hover:underline'
+                >
+                  Tickets
+                </a>
+              </div>
             )}
           </div>
         </div>
-        <div className='col-span-2 md:col-span-1'>
-          <div className='prose break-words'>
+        <div className='col-span-1 md:col-span-2'>
+          <div className='break-words'>
             <PrismicRichText field={event.data.body} />
           </div>
         </div>
