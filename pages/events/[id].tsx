@@ -25,13 +25,13 @@ function Event({ event }: EventProps) {
           alt='Event Header Image'
         />
         <div className='absolute text-center w-full bottom-1/2 translate-y-1/2 px-20 max-w-1/2'>
-          <h1 className='text-8xl  text-white animate-bounce drop-shadow-lg'>
+          <h1 className='text-8xl text-white animate-bounce drop-shadow-lg'>
             ↓
           </h1>
         </div>
       </div>
 
-      <div className='px-8 py-20 grid grid-cols-1 md:grid-cols-3 gap-4'>
+      <div className='px-8 py-20 grid grid-cols-1 md:grid-cols-3 gap-4 min-h-screen'>
         <div className='col-span-1'>
           <div className='space-y-4 text-black'>
             <h2 className='mb-4'>{data.title}</h2>
