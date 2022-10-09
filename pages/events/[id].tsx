@@ -4,6 +4,7 @@ import { EventDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
 import { longDate } from '../../utils/time'
 import { PrismicNextImage } from '@prismicio/next'
+import SliceRenderer from '../../components/SliceRenderer'
 
 interface EventProps {
   event: EventDocument
@@ -63,6 +64,7 @@ function Event({ event }: EventProps) {
         <div className='col-span-1 md:col-span-2'>
           <div className='break-words space-y-4'>
             <PrismicRichText field={event.data.body} />
+            <SliceRenderer slices={event.data.slices} />
           </div>
         </div>
       </div>

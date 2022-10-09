@@ -3,6 +3,7 @@ import * as prismicH from '@prismicio/helpers'
 import { BandDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
+import SliceRenderer from '../../components/SliceRenderer'
 
 interface BandProps {
   band: BandDocument
@@ -61,6 +62,7 @@ function Band({ band }: BandProps) {
 
           <div className='lg:col-span-2 w-full break-words space-y-4'>
             <PrismicRichText field={band.data.bio} />
+            <SliceRenderer slices={band.data.slices} />
           </div>
         </div>
       </div>

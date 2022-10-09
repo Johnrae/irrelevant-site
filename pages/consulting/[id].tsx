@@ -26,9 +26,8 @@ function Post({ post }: PostProps) {
         <div className='col-span-1 md:col-span-2'>
           <div className='break-words space-y-4'>
             <PrismicRichText field={post.data.summary} />
+            <SliceRenderer slices={data.slices} />
           </div>
-
-          <SliceRenderer slices={data.slices} />
         </div>
       </div>
     </div>
