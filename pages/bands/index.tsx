@@ -45,7 +45,11 @@ export default function BandIndex({ bands }: any) {
 export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
 
-  const bands = await client.getAllByType('band')
+  const bands = await client.getAllByType('band', {
+    orderings: {
+      field: 'my.band.name',
+    },
+  })
 
   return {
     props: {
