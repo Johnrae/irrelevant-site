@@ -4,7 +4,11 @@ import {
   ImageGallerySlice,
   ImageGallerySliceDefaultItem,
 } from '../../types.generated'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/solid'
 
 interface SelectedImage {
   data: ImageGallerySliceDefaultItem
@@ -129,6 +133,13 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
               }}
             />
           )}
+          <XMarkIcon
+            className='h-10 w-10 text-white fixed top-5 right-5 cursor-pointer'
+            onClick={(e) => {
+              e.stopPropagation()
+              setSelectedItem(null)
+            }}
+          />
         </div>
       )}
     </div>
