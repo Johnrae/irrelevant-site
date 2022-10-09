@@ -1,23 +1,32 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-const Links = () => (
-  <>
-    <Link href={'/events'}>Events</Link>
-    <Link href={'/bands'}>Artists</Link>
-    <Link href={'/consulting'}>Consulting</Link>
-    <a
-      target='_blank'
-      rel='noreferrer'
-      href={'https://irrelevantmusic.net/shop'}
-    >
-      Shop
-    </a>
-  </>
-)
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+
+  const closeModal = () => setIsOpen(false)
+
+  const Links = () => (
+    <>
+      <Link onClick={closeModal} href={'/events'}>
+        Events
+      </Link>
+      <Link onClick={closeModal} href={'/bands'}>
+        Artists
+      </Link>
+      <Link onClick={closeModal} href={'/consulting'}>
+        Consulting
+      </Link>
+      <a
+        target='_blank'
+        rel='noreferrer'
+        href={'https://irrelevantmusic.net/shop'}
+      >
+        Shop
+      </a>
+    </>
+  )
 
   return (
     <>
@@ -55,7 +64,9 @@ export default function Navigation() {
       {isOpen && (
         <div className='md:hidden fixed top-0 left-0 w-full h-full bg-white z-50'>
           <div className='flex flex-col justify-center items-center h-full relative space-y-4'>
-            <Link href={'/'}>Home</Link>
+            <Link onClick={closeModal} href={'/'}>
+              Home
+            </Link>
             <Links />
           </div>
           <button
