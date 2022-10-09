@@ -11,7 +11,7 @@ export default function SliceRenderer({ slices }: Props) {
     console.log(slice)
     if (slice.slice_type === 'image_gallery') {
       return (
-        <div className='my-4'>
+        <div className='my-4' key={slice.id}>
           <ImageGallery slice={slice} />
         </div>
       )
@@ -19,7 +19,7 @@ export default function SliceRenderer({ slices }: Props) {
 
     if (slice.slice_type === 'basic_content') {
       return (
-        <div className='space-y-4'>
+        <div className='space-y-4' key={slice.id}>
           <PrismicRichText field={slice.primary.body} />
         </div>
       )
