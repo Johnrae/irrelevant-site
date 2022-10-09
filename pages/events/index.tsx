@@ -47,7 +47,7 @@ function EventRow({ event }: { event: EventDocument }) {
           </div>
         </div>
       </Link>
-      <div className='hidden md:fixed h-screen top-0 bottom-0 right-8 w-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-200'>
+      <div className='hidden md:block fixed h-screen top-0 bottom-0 right-8 w-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-200'>
         <div className='image-container'>
           <Image
             className=''

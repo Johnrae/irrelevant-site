@@ -21,9 +21,11 @@ function Band({ band }: BandProps) {
           loader={prismicLoader}
           alt='Band Header Image'
         />
-        <h1 className='py-8 absolute bottom-20 w-full text-center text-white font-semibold'>
-          {band.data.name}
-        </h1>
+        <div className='absolute bottom-20 w-full p-8 grid gap-4 grid-cols-3'>
+          <h1 className='col-span-2 col-start-2 text-white font-semibold'>
+            {band.data.name}
+          </h1>
+        </div>
       </div>
       <div className='px-8 py-20'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
