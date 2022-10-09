@@ -12,8 +12,6 @@ interface SelectedImage {
 }
 
 export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
-  console.log(slice)
-
   const [selectedItem, setSelectedItem] = useState<SelectedImage | null>(null)
 
   useEffect(() => {
@@ -127,7 +125,6 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
               className='h-20 w-20 text-white fixed right-0 top-1/2 -translate-y-1/2 cursor-pointer'
               onClick={(e) => {
                 e.stopPropagation()
-                console.log('click')
                 selectNextItem()
               }}
             />
