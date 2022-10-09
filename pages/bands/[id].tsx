@@ -22,7 +22,7 @@ function Band({ band }: BandProps) {
           alt='Band Header Image'
         />
         <div className='absolute bottom-20 w-full p-8 grid gap-4 grid-cols-3'>
-          <h1 className='col-span-2 col-start-2 text-white font-semibold'>
+          <h1 className='col-span-2 col-start-2 text-white'>
             {band.data.name}
           </h1>
         </div>

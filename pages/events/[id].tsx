@@ -25,16 +25,9 @@ function Event({ event }: EventProps) {
           alt='Event Header Image'
         />
         <div className='absolute text-center w-full bottom-1/2 translate-y-1/2 px-20 max-w-1/2'>
-          <h1 className='py-8 text-center text-white font-semibold drop-shadow-md'>
-            {event.data.title}
+          <h1 className='text-8xl  text-white animate-bounce drop-shadow-lg'>
+            ↓
           </h1>
-          {data.ticketLink && (
-            <a href={data.ticketLink} target='_blank' rel='noreferrer'>
-              <h1 className='text-white font-semibold drop-shadow-md'>
-                Buy Tickets
-              </h1>
-            </a>
-          )}
         </div>
       </div>
 
