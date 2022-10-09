@@ -55,18 +55,17 @@
         "config": {
           "label": "Links",
           "fields": {
-            "url": {
-              "type": "Link",
-              "config": {
-                "label": "Url",
-                "placeholder": "",
-                "select": null
-              }
-            },
             "title": {
               "type": "Text",
               "config": {
                 "label": "Title",
+                "placeholder": ""
+              }
+            },
+            "url": {
+              "type": "Text",
+              "config": {
+                "label": "Url",
                 "placeholder": ""
               }
             }

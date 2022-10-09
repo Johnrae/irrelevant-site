@@ -63,7 +63,7 @@ function Event({ event }: EventProps) {
           </div>
         </div>
         <div className='col-span-1 md:col-span-2'>
-          <div className='break-words'>
+          <div className='break-words space-y-4'>
             <PrismicRichText field={event.data.body} />
           </div>
         </div>

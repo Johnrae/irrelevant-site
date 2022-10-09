@@ -97,11 +97,10 @@
               }
             },
             "url": {
-              "type": "Link",
+              "type": "Text",
               "config": {
                 "label": "Url",
-                "placeholder": "",
-                "select": null
+                "placeholder": ""
               }
             }
           }
@@ -120,11 +119,10 @@
               }
             },
             "url": {
-              "type": "Link",
+              "type": "Text",
               "config": {
                 "label": "Url",
-                "placeholder": "",
-                "select": null
+                "placeholder": ""
               }
             }
           }

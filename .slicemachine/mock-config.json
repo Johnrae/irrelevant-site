@@ -6,7 +6,9 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
-      }
+      },
+      "socialLinks": {},
+      "bands": {}
     },
     "consulting-project": {
       "summary": {
@@ -22,7 +24,8 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
-      }
+      },
+      "links": {}
     }
   },
   "slices": {
