@@ -1,9 +1,9 @@
-import { createClient, prismicLoader } from '../../prismic/client'
-import Image from 'next/image'
+import { createClient } from '../../prismic/client'
 import * as prismicH from '@prismicio/helpers'
 import { EventDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
 import { longDate } from '../../utils/time'
+import { PrismicNextImage } from '@prismicio/next'
 
 interface EventProps {
   event: EventDocument
@@ -17,12 +17,10 @@ function Event({ event }: EventProps) {
   return (
     <div>
       <div className='relative h-screen'>
-        <Image
+        <PrismicNextImage
           className='object-cover'
-          src={event.data.featuredImage.url as string}
+          field={event.data.featuredImage}
           layout='fill'
-          loader={prismicLoader}
-          alt='Event Header Image'
         />
         <div className='absolute text-center w-full bottom-1/2 translate-y-1/2 px-20 max-w-1/2'>
           <h1 className='text-8xl text-white animate-bounce drop-shadow-lg'>

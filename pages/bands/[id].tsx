@@ -1,8 +1,8 @@
-import { createClient, prismicLoader } from '../../prismic/client'
-import Image from 'next/image'
+import { createClient } from '../../prismic/client'
 import * as prismicH from '@prismicio/helpers'
 import { BandDocument } from '../../types.generated'
 import { PrismicRichText } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
 
 interface BandProps {
   band: BandDocument
@@ -14,12 +14,10 @@ function Band({ band }: BandProps) {
   return (
     <div>
       <div className='relative h-screen'>
-        <Image
+        <PrismicNextImage
           className='object-cover grayscale'
-          src={band.data.headerImage.url as string}
+          field={band.data.headerImage}
           layout='fill'
-          loader={prismicLoader}
-          alt='Band Header Image'
         />
         <div className='absolute bottom-20 w-full p-8 grid gap-4 grid-cols-3'>
           <h1 className='col-span-2 col-start-2 text-white'>

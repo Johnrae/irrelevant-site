@@ -1,10 +1,10 @@
 import { EventDocument } from '../../types.generated'
-import { createClient, prismicLoader } from '../../prismic/client'
+import { createClient } from '../../prismic/client'
 import Link from 'next/link'
-import Image from 'next/image'
 import { longDate } from '../../utils/time'
 import { NavSpacer } from '../../components/NavSpacer'
 import { useFillScreen } from '../../hooks/useFillScreen'
+import { PrismicNextImage } from '@prismicio/next'
 
 function EventRow({ event }: { event: EventDocument }) {
   const { data } = event
@@ -49,12 +49,10 @@ function EventRow({ event }: { event: EventDocument }) {
       </Link>
       <div className='hidden md:block fixed h-screen top-0 bottom-0 right-8 w-1/3 opacity-0 group-hover:opacity-100 transition-opacity duration-200'>
         <div className='image-container'>
-          <Image
-            className=''
-            src={data.flyer.url as string}
+          <PrismicNextImage
+            className='w-full'
+            field={data.flyer}
             layout='fill'
-            loader={prismicLoader}
-            width='100%'
             objectFit='contain'
           />
         </div>
