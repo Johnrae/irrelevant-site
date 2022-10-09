@@ -48,16 +48,14 @@ function Band({ band }: BandProps) {
 
             <div>
               <p className='block text-sm pb-4'>Artist Links</p>
-              {band.data.links.map((link) => (
-                <a
-                  // @ts-expect-error
-                  href={link.url.link_type === 'Web' && link.url.url}
-                  className='text-lg block'
-                  key={link.title}
-                >
-                  {link.title}
-                </a>
-              ))}
+              {band.data.links.map((link) => {
+                if (!link.url || !link.title) return null
+                return (
+                  <a href={link.url} className='text-lg block' key={link.title}>
+                    {link.title}
+                  </a>
+                )
+              })}
             </div>
           </div>
 
