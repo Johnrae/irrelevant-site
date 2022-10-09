@@ -1,4 +1,3 @@
-import { ReactElement, useLayoutEffect, useState } from 'react'
 import { useFillScreen } from '../hooks/useFillScreen'
 import { NavbarSpacerLayout } from '../layouts/MainLayout'
 import { NextPageWithLayout } from './_app'

@@ -19,6 +19,10 @@ const routes: any[] = [
     type: 'event',
     path: '/events/:uid',
   },
+  {
+    type: 'consulting-project',
+    path: '/consulting/:uid',
+  },
 ]
 
 /**

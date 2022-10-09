@@ -31,7 +31,14 @@
   "slices": {
     "BasicContent": {
       "default": {
-        "primary": {}
+        "primary": {
+          "body": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "ImageGallery": {
