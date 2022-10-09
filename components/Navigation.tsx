@@ -5,6 +5,7 @@ const Links = () => (
   <>
     <Link href={'/events'}>Events</Link>
     <Link href={'/bands'}>Roster</Link>
+    <Link href={'/consulting'}>Consulting</Link>
     <a
       target='_blank'
       rel='noreferrer'

@@ -57,7 +57,7 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
   const hasPreviousImage =
     selectedItem && selectedItem.index > 0 && slice.items.length > 1
 
-  const selectNextItem = () => {
+  const selectPreviousItem = () => {
     setSelectedItem((prev) => {
       if (!prev) return null
       if (prev.index === 0) return prev
@@ -68,7 +68,7 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
     })
   }
 
-  const selectPreviosItem = () => {
+  const selectNextItem = () => {
     setSelectedItem((prev) => {
       if (!prev) return null
       if (prev.index === slice.items.length - 1) return prev
@@ -108,11 +108,14 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
               className='h-20 w-20 text-white fixed left-0 top-1/2 -translate-y-1/2 cursor-pointer'
               onClick={(e) => {
                 e.stopPropagation()
-                selectPreviosItem()
+                selectPreviousItem()
               }}
             />
           )}
-          <div className='relative h-full w-full select-none'>
+          <div
+            className='relative h-full w-full select-none'
+            onClick={(e) => e.stopPropagation()}
+          >
             <PrismicNextImage
               field={selectedItem.data.image}
               layout='fill'
@@ -124,6 +127,7 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
               className='h-20 w-20 text-white fixed right-0 top-1/2 -translate-y-1/2 cursor-pointer'
               onClick={(e) => {
                 e.stopPropagation()
+                console.log('click')
                 selectNextItem()
               }}
             />
