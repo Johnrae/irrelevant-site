@@ -11,10 +11,7 @@ function BandRow({ band }: { band: BandDocument }) {
     data.headerImage?.thumbnail?.url || (data.headerImage.url as string)
   return (
     <div className='relative group'>
-      <Link
-        href={`/bands/${band.uid}`}
-        onClick={(e) => console.log('clicked', e)}
-      >
+      <Link href={`/bands/${band.uid}`}>
         <div>
           <div className='border-t py-3 cursor-pointer border-black relative z-10'>
             <p className='mb-10'>{data.loacation}</p>
