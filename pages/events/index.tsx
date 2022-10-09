@@ -6,7 +6,7 @@ import { NavSpacer } from '../../components/NavSpacer'
 import { useFillScreen } from '../../hooks/useFillScreen'
 import { PrismicNextImage } from '@prismicio/next'
 
-function EventRow({ event }: { event: EventDocument }) {
+export function EventRow({ event }: { event: EventDocument }) {
   const { data } = event
 
   return (
@@ -70,6 +70,11 @@ export default function EventIndex({ events, navigation, settings }: any) {
         {events.map((event: EventDocument) => (
           <EventRow event={event} key={event.uid} />
         ))}
+        <div className='border-t border-black pt-8'>
+          <Link href={'/past-events'}>
+            <h2 className='underline cursor-pointer'>Past Events</h2>
+          </Link>
+        </div>
       </div>
     </div>
   )
@@ -84,9 +89,14 @@ export async function getStaticProps({ params, previewData }: any) {
     },
   })
 
+  const filteredEvents = events.filter((event: EventDocument) => {
+    const date = event.data.date || ''
+    return new Date(date) > new Date()
+  })
+
   return {
     props: {
-      events,
+      events: filteredEvents,
     },
   }
 }
