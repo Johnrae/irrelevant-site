@@ -10,7 +10,11 @@ export default function SliceRenderer({ slices }: Props) {
   const content = slices.map((slice) => {
     console.log(slice)
     if (slice.slice_type === 'image_gallery') {
-      return <ImageGallery slice={slice} />
+      return (
+        <div className='my-4'>
+          <ImageGallery slice={slice} />
+        </div>
+      )
     }
 
     if (slice.slice_type === 'basic_content') {
