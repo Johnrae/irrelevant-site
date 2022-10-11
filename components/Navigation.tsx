@@ -18,13 +18,9 @@ export default function Navigation() {
       <Link onClick={closeModal} href={'/consulting'}>
         Consulting
       </Link>
-      <a
-        target='_blank'
-        rel='noreferrer'
-        href={'https://irrelevantmusic.net/shop'}
-      >
+      <Link onClick={closeModal} href={'/shop'}>
         Shop
-      </a>
+      </Link>
     </>
   )
 
