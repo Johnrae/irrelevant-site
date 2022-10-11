@@ -14,10 +14,6 @@ async function ShopifyData(query: string, creds: ShopifyCreds) {
   const { domain, token } = creds
   const URL = `https://${domain}/api/2022-10/graphql.json`
 
-  console.log('URL', URL)
-  console.log('domain', domain)
-  console.log('storefrontAccessToken', token)
-
   const options = {
     endpoint: URL,
     method: 'POST',
@@ -31,7 +27,6 @@ async function ShopifyData(query: string, creds: ShopifyCreds) {
 
   try {
     const data = await fetch(URL, options as RequestInit).then((response) => {
-      console.log(response)
       return response.json()
     })
 
@@ -48,15 +43,14 @@ export async function getAllProducts(creds: ShopifyCreds) {
         node {
           handle
           id
+          title
+          descriptionHtml
         }
       }
     }
   }`
 
-  console.log(creds)
-
   const response = await ShopifyData(query, creds)
-  console.log(response)
 
   const slugs = response.data.products.edges ? response.data.products.edges : []
 

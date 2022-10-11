@@ -12,8 +12,8 @@ export default function ShopIndex({ products }: any) {
 
 export async function getStaticProps() {
   const products = await shopifyClient.getAllProducts({
-    domain: process.env.SHOPIFY_STORE_DOMAIN,
-    token: process.env.SHOPIFY_STOREFRONT_TOKEN,
+    domain: process.env.SHOPIFY_STORE_DOMAIN || '',
+    token: process.env.SHOPIFY_STOREFRONT_TOKEN || '',
   })
 
   return {

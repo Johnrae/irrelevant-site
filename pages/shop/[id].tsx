@@ -9,7 +9,10 @@ export default function ProductPage({ product }: any) {
 }
 
 export async function getStaticPaths() {
-  const products = await getAllProducts()
+  const products = await getAllProducts({
+    domain: process.env.SHOPIFY_STORE_DOMAIN || '',
+    token: process.env.SHOPIFY_STOREFRONT_TOKEN || '',
+  })
 
   const paths = products.map((item: any) => {
     const product = String(item.node.handle)
@@ -26,7 +29,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: any) {
-  const product = await getProduct(params.product)
+  const product = await getProduct(params.product, {
+    domain: process.env.SHOPIFY_STORE_DOMAIN || '',
+    token: process.env.SHOPIFY_STOREFRONT_TOKEN || '',
+  })
 
   return {
     props: {
