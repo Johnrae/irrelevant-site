@@ -44,7 +44,21 @@ export async function getAllProducts(creds: ShopifyCreds) {
           handle
           id
           title
-          descriptionHtml
+          priceRange {
+            minVariantPrice {
+              amount
+              currencyCode
+            }
+            maxVariantPrice {
+              amount
+              currencyCode
+            }
+          }
+          featuredImage {
+            altText
+            id
+            url
+          }
         }
       }
     }
@@ -61,68 +75,33 @@ export async function getProduct(handle: string, creds: ShopifyCreds) {
   const query = `
   {
     product(handle: "${handle}") {
-    	collections(first: 1) {
-      	edges {
-          node {
-            products(first: 5) {
-              edges {
-                node {
-                  priceRange {
-                    minVariantPrice {
-                      amount
-                    }
-                  }
-                  handle
-                  title
-                  id
-                  images(first: 5) {
-                    edges {
-                      node {
-                        url
-                        altText
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-    	}
       id
       title
       handle
       description
+      descriptionHtml
+      priceRange {
+        minVariantPrice {
+          amount
+          currencyCode
+        }
+        maxVariantPrice {
+          amount
+          currencyCode
+        }
+      }
+
+      featuredImage {
+        altText
+        id
+        url
+      }
       images(first: 5) {
         edges {
           node {
+            id
             url
             altText
-          }
-        }
-      }
-      options {
-        name
-        values
-        id
-      }
-      variants(first: 25) {
-        edges {
-          node {
-            selectedOptions {
-              name
-              value
-            }
-            image {
-              url
-              altText
-            }
-            title
-            id
-            availableForSale
-            priceV2 {
-              amount
-            }
           }
         }
       }
