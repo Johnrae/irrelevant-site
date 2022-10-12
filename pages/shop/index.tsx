@@ -39,7 +39,6 @@ export default function ShopIndex({ products }: any) {
           return <ProductCard key={product.id} product={product} />
         })}
       </div>
-      <pre>{JSON.stringify(products, null, 2)}</pre>
     </div>
   )
 }

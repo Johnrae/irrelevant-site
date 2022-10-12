@@ -8,30 +8,50 @@ export default function Navigation() {
   const closeModal = () => setIsOpen(false)
 
   const Links = () => (
-    <>
+    <div className='flex flex-row justify-between w-full'>
       <Link onClick={closeModal} href={'/events'}>
-        Events
+        <p
+          className='block cursor-pointer hover:underline'
+          onClick={closeModal}
+        >
+          Events
+        </p>
       </Link>
       <Link onClick={closeModal} href={'/bands'}>
-        Artists
+        <p
+          className='block cursor-pointer hover:underline'
+          onClick={closeModal}
+        >
+          Artists
+        </p>
       </Link>
       <Link onClick={closeModal} href={'/consulting'}>
-        Consulting
+        <p
+          className='block cursor-pointer hover:underline'
+          onClick={closeModal}
+        >
+          Consulting
+        </p>
       </Link>
       <Link onClick={closeModal} href={'/shop'}>
-        Shop
+        <p
+          className='block cursor-pointer hover:underline'
+          onClick={closeModal}
+        >
+          Shop
+        </p>
       </Link>
-    </>
+    </div>
   )
 
   return (
     <>
-      <nav className='difference fixed w-full flex flex-row justify-between items-center px-8 py-4 z-50 text-xl'>
-        <div>
+      <nav className='difference fixed w-full grid gap-4 grid-cols-8 justify-between items-center px-8 py-4 z-50 text-xl'>
+        <div className='col-span-5'>
           <Link href={'/'}>Irrelevant</Link>
         </div>
 
-        <div className='hidden md:flex flex-row space-x-8'>
+        <div className='hidden col-span-3 md:flex flex-row space-x-8'>
           <Links />
         </div>
 

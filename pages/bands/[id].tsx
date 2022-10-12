@@ -16,7 +16,7 @@ function Band({ band }: BandProps) {
     <div>
       <div className='relative h-screen'>
         <PrismicNextImage
-          className='object-cover grayscale'
+          className='object-cover'
           field={band.data.headerImage}
           layout='fill'
         />

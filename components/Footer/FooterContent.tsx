@@ -1,21 +1,23 @@
 export default function FooterContent() {
   return (
     <>
-      <div className='col-span-4 lg:col-span-4 flex flex-col'>
-        <span>Irrelevant</span>
-        <span>©2022</span>
+      <div className='col-span-5 flex flex-col'>
+        <span className='small'>Irrelevant</span>
+        <span className='small'>©2022</span>
       </div>
-      <div className='col-span-4 lg:col-span-2 flex flex-col'>
-        <span>Kyle Swick</span>
-        <span className='break-words'>kyle@irrelevantmusic.net</span>
-      </div>
-      <div className='col-span-4 lg:col-span-1 flex flex-col'>
-        <span>design by</span>
-        <span>Andrew Walsh</span>
-      </div>
-      <div className='col-span-4 lg:col-span-1 flex flex-col'>
-        <span>code by</span>
-        <span>John Rae</span>
+      <div className='col-span-3 flex flex-row justify-between'>
+        <div className='flex flex-col'>
+          <span className='small'>Kyle Swick</span>
+          <span className='break-words small'>kyle@irrelevantmusic.net</span>
+        </div>
+        <div className='flex flex-col'>
+          <span className='small'>design by</span>
+          <span className='small'>Andrew Walsh</span>
+        </div>
+        <div className='flex flex-col'>
+          <span className='small'>code by</span>
+          <span className='small'>John Rae</span>
+        </div>
       </div>
     </>
   )
