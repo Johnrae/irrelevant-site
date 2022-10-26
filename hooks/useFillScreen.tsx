@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useState } from 'react'
 import { debounce } from 'lodash'
 
 export const useFillScreen = () => {
-  const [footerHeight, setFooterHeight] = useState(80)
+  const [footerHeight, setFooterHeight] = useState(68)
 
   const calculateHeight = debounce(() => {
     const footer = document.querySelector('footer')
