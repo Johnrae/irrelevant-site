@@ -18,10 +18,17 @@ export default function ProductPage({ product }: any) {
   return (
     <div style={{ minHeight }} className='py-4 px-8 sm:pt-20'>
       <div className='grid gap-4 grid-cols-3'>
-        <div className='col-span-1'>
+        <div className='col-span-1 space-y-4'>
           <img src={product.featuredImage.url} />
           <p className='pt-2'>{price}</p>
-          <a href={product.onlineStoreUrl}>Buy Now</a>
+          <div>
+            <a
+              href={product.onlineStoreUrl}
+              className='block py-2 px-4 max-w-fit border border-black '
+            >
+              Buy Now
+            </a>
+          </div>
         </div>
         <div className='col-span-2'>
           <h3>{product.title}</h3>

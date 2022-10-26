@@ -12,7 +12,7 @@ function BandRow({ band }: { band: BandDocument }) {
       <Link href={`/bands/${band.uid}`}>
         <div>
           <div className='border-t py-3 cursor-pointer border-black relative z-10'>
-            <p className='mb-10'>{data.loacation}</p>
+            <p className='mb-10 small'>{data.loacation}</p>
             <h1 className=''>{data.name}</h1>
           </div>
           <div className='hidden md:block transition duration-200 opacity-0 group-hover:opacity-100 absolute right-0 top-0 p-4 z-0 h-40 w-60'>
