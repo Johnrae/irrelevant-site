@@ -5,6 +5,7 @@ import { longDate } from '../../utils/time'
 import { NavSpacer } from '../../components/NavSpacer'
 import { useFillScreen } from '../../hooks/useFillScreen'
 import { PrismicNextImage } from '@prismicio/next'
+import Image from 'next/image'
 
 export function EventRow({ event }: { event: EventDocument }) {
   const { data } = event
@@ -25,12 +26,21 @@ export function EventRow({ event }: { event: EventDocument }) {
                 {data.ticketLink && (
                   <a
                     href={data.ticketLink}
-                    className='hidden md:block'
+                    className='hidden max-w-min md:block'
                     target='_blank'
                     rel='noreferrer'
                     onClick={(e) => e.stopPropagation()}
                   >
-                    Tickets
+                    <div className='flex flex-row items-center space-x-2 max-w-fit border-b border-transparent hover:border-black'>
+                      <span className='block'>Tickets</span>
+                      <div className='flex items-center justify-center h-5 w-5 flex-shrink-0'>
+                        <Image
+                          src={'/UpRightArrow.svg'}
+                          height={16}
+                          width={16}
+                        />
+                      </div>
+                    </div>
                   </a>
                 )}
               </div>

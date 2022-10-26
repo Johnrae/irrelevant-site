@@ -5,6 +5,7 @@ import { PrismicRichText } from '@prismicio/react'
 import { longDate } from '../../utils/time'
 import { PrismicNextImage } from '@prismicio/next'
 import SliceRenderer from '../../components/SliceRenderer'
+import Image from 'next/image'
 
 interface EventProps {
   event: EventDocument
@@ -49,13 +50,13 @@ function Event({ event }: EventProps) {
 
             {data.ticketLink && (
               <div>
-                <a
-                  href={data.ticketLink}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='hover:underline'
-                >
-                  Tickets
+                <a href={data.ticketLink} target='_blank' rel='noreferrer'>
+                  <div className='flex flex-row items-center space-x-2 max-w-fit border-b border-transparent hover:border-black'>
+                    <span className='block'>Tickets</span>
+                    <div className='flex items-center justify-center'>
+                      <Image src={'/UpRightArrow.svg'} height={16} width={16} />
+                    </div>
+                  </div>
                 </a>
               </div>
             )}

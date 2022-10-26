@@ -44,6 +44,7 @@ export async function getAllProducts(creds: ShopifyCreds) {
           handle
           id
           title
+          onlineStoreUrl
           priceRange {
             minVariantPrice {
               amount
@@ -66,7 +67,9 @@ export async function getAllProducts(creds: ShopifyCreds) {
 
   const response = await ShopifyData(query, creds)
 
-  const slugs = response.data.products.edges ? response.data.products.edges : []
+  const slugs = response.data?.products?.edges
+    ? response.data.products.edges
+    : []
 
   return slugs
 }
@@ -80,6 +83,7 @@ export async function getProduct(handle: string, creds: ShopifyCreds) {
       handle
       description
       descriptionHtml
+      onlineStoreUrl
       priceRange {
         minVariantPrice {
           amount

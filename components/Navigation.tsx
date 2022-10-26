@@ -8,7 +8,7 @@ export default function Navigation() {
   const closeModal = () => setIsOpen(false)
 
   const Links = () => (
-    <div className='flex flex-row justify-between w-full'>
+    <div className='flex flex-col space-y-4 justify-center items-center md:space-y-0 md:flex-row md:justify-between md:items-baseline w-full'>
       <Link onClick={closeModal} href={'/events'}>
         <p
           className='block cursor-pointer hover:underline'
@@ -47,7 +47,7 @@ export default function Navigation() {
   return (
     <>
       <nav className='difference fixed w-full grid gap-4 grid-cols-8 justify-between items-center px-8 py-4 z-50 text-xl'>
-        <div className='col-span-5'>
+        <div className='col-span-7 md:col-span-5'>
           <Link href={'/'}>Irrelevant</Link>
         </div>
 
@@ -55,7 +55,7 @@ export default function Navigation() {
           <Links />
         </div>
 
-        <div className='md:hidden'>
+        <div className='md:hidden flex items-baseline justify-end'>
           <button onClick={toggle}>
             <span>
               <svg
