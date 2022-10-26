@@ -82,7 +82,7 @@ export default function ImageGallery({ slice }: { slice: ImageGallerySlice }) {
   }
 
   return (
-    <div className='grid grid-cols-4 gap-4'>
+    <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
       {slice.items.map((item, i) => {
         if (!item.image.url) return null
         return (
