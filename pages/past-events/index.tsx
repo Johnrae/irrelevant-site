@@ -16,7 +16,7 @@ export default function EventIndex({ events, navigation, settings }: any) {
   )
 }
 
-export async function getStaticProps({ params, previewData }: any) {
+export async function getServerSideProps({ params, previewData }: any) {
   const client = createClient({ previewData })
 
   const events = await client.getAllByType('event', {
