@@ -25,7 +25,7 @@ export function EventRow({ event }: { event: EventDocument }) {
                 {data.ticketLink && (
                   <a
                     href={data.ticketLink}
-                    className='hidden max-w-min md:block'
+                    className='max-w-min'
                     target='_blank'
                     rel='noreferrer'
                     onClick={(e) => e.stopPropagation()}
@@ -37,6 +37,7 @@ export function EventRow({ event }: { event: EventDocument }) {
                           src={'/UpRightArrow.svg'}
                           height={16}
                           width={16}
+                          alt='arrow'
                         />
                       </div>
                     </div>

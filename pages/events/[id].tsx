@@ -54,7 +54,12 @@ function Event({ event }: EventProps) {
                   <div className='flex flex-row items-center space-x-2 max-w-fit border-b border-transparent hover:border-black'>
                     <span className='block'>Tickets</span>
                     <div className='flex items-center justify-center'>
-                      <Image src={'/UpRightArrow.svg'} height={16} width={16} />
+                      <Image
+                        src={'/UpRightArrow.svg'}
+                        height={16}
+                        width={16}
+                        alt='arrow'
+                      />
                     </div>
                   </div>
                 </a>
