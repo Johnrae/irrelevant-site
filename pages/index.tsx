@@ -1,15 +1,9 @@
-import { useFillScreen } from '../hooks/useFillScreen'
 import { NavbarSpacerLayout } from '../layouts/MainLayout'
 import { NextPageWithLayout } from './_app'
 
 const Home: NextPageWithLayout = () => {
-  const { footerHeight } = useFillScreen()
-
   return (
-    <div
-      className='flex flex-col justify-center'
-      style={{ minHeight: `calc(100vh - ${footerHeight}px - 4rem)` }}
-    >
+    <div className='flex flex-col justify-center md:min-h-[calc(100vh_-_150px)]'>
       <div className='py-4 px-8'>
         <div className='grid grid-cols-8'>
           <h1 className='mb-4 col-span-8 md:col-span-6 lg:col-span-5'>

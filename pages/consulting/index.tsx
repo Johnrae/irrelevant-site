@@ -2,7 +2,6 @@ import { ConsultingProjectDocument } from '../../types.generated'
 import { createClient } from '../../prismic/client'
 import Link from 'next/link'
 import { NavSpacer } from '../../components/NavSpacer'
-import { useFillScreen } from '../../hooks/useFillScreen'
 
 function ConsultingProjectRow({ post }: { post: ConsultingProjectDocument }) {
   const { data } = post
@@ -21,9 +20,8 @@ function ConsultingProjectRow({ post }: { post: ConsultingProjectDocument }) {
 }
 
 export default function ConsultingProjectIndex({ posts }: any) {
-  const { minHeight } = useFillScreen()
   return (
-    <div style={{ minHeight }}>
+    <div>
       <NavSpacer />
       <div className='px-8 py-4 grid md:grid-cols-2 gap-8'>
         {posts.map((post: ConsultingProjectDocument) => (

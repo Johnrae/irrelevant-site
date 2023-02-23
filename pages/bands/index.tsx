@@ -2,7 +2,6 @@ import { BandDocument } from '../../types.generated'
 import { createClient } from '../../prismic/client'
 import Link from 'next/link'
 import { NavSpacer } from '../../components/NavSpacer'
-import { useFillScreen } from '../../hooks/useFillScreen'
 import { PrismicNextImage } from '@prismicio/next'
 
 function BandRow({ band }: { band: BandDocument }) {
@@ -29,9 +28,8 @@ function BandRow({ band }: { band: BandDocument }) {
 }
 
 export default function BandIndex({ bands }: any) {
-  const { minHeight } = useFillScreen()
   return (
-    <div style={{ minHeight }}>
+    <div>
       <NavSpacer />
       <div className='px-8 py-4 grid md:grid-cols-2 gap-8'>
         {bands.map((band: BandDocument) => (

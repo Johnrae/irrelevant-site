@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import { useFillScreen } from '../../hooks/useFillScreen'
 import { shopifyClient } from '../../lib/shopify'
 import { formatter } from '../../lib/formatter'
 
 function ProductCard({ product }: { product: any }) {
-
   const price = formatter.format(product.priceRange?.minVariantPrice?.amount)
 
   return (
@@ -22,10 +20,8 @@ function ProductCard({ product }: { product: any }) {
 }
 
 export default function ShopIndex({ products }: any) {
-  const { minHeight } = useFillScreen()
-
   return (
-    <div style={{ minHeight }} className='py-4 px-8 sm:pt-20'>
+    <div className='py-4 px-8 sm:pt-20'>
       <div className='grid gap-4 grid-cols-4'>
         {products.map(({ node: product }: { node: any }) => {
           console.log(product)

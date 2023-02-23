@@ -1,13 +1,11 @@
 import { EventDocument } from '../../types.generated'
 import { createClient } from '../../prismic/client'
 import { NavSpacer } from '../../components/NavSpacer'
-import { useFillScreen } from '../../hooks/useFillScreen'
 import { EventRow } from '../events'
 
 export default function EventIndex({ events, navigation, settings }: any) {
-  const { minHeight } = useFillScreen()
   return (
-    <div style={{ minHeight }}>
+    <div>
       <NavSpacer />
       <div className='px-8 py-4'>
         {events.map((event: EventDocument) => (

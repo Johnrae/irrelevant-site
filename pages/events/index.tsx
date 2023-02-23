@@ -3,7 +3,6 @@ import { createClient } from '../../prismic/client'
 import Link from 'next/link'
 import { longDate } from '../../utils/time'
 import { NavSpacer } from '../../components/NavSpacer'
-import { useFillScreen } from '../../hooks/useFillScreen'
 import { PrismicNextImage } from '@prismicio/next'
 import Image from 'next/image'
 
@@ -72,9 +71,8 @@ export function EventRow({ event }: { event: EventDocument }) {
 }
 
 export default function EventIndex({ events, navigation, settings }: any) {
-  const { minHeight } = useFillScreen()
   return (
-    <div style={{ minHeight }}>
+    <div>
       <NavSpacer />
       <div className='px-8 py-4'>
         {events.map((event: EventDocument) => (

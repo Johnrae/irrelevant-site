@@ -1,14 +1,11 @@
-import { useFillScreen } from '../../hooks/useFillScreen'
 import { getAllProducts, getProduct } from '../../lib/shopify'
 import { formatter } from '../../lib/formatter'
 
 export default function ProductPage({ product }: any) {
-  const { minHeight } = useFillScreen()
-
   const price = formatter.format(product.priceRange?.minVariantPrice?.amount)
 
   return (
-    <div style={{ minHeight }} className='py-4 px-8 sm:pt-20'>
+    <div className='py-4 px-8 sm:pt-20'>
       <div className='grid gap-4 grid-cols-3'>
         <div className='col-span-1 space-y-4'>
           <img src={product.featuredImage.url} />
