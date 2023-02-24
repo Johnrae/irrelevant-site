@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { shopifyClient } from '../../lib/shopify'
 import { formatter } from '../../lib/formatter'
+import { NavbarSpacerLayout } from '../../layouts/MainLayout'
 
 function ProductCard({ product }: { product: any }) {
   const price = formatter.format(product.priceRange?.minVariantPrice?.amount)
@@ -8,9 +9,11 @@ function ProductCard({ product }: { product: any }) {
   return (
     <Link href={`/shop/${product.handle}`}>
       <div className='group cursor-pointer'>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          className='pb-4 transition duration-300 grayscale group-hover:grayscale-0'
+          className='pb-4 transition duration-300 grayscale group-hover:grayscale-0 h-40 w-40'
           src={product.featuredImage.url}
+          alt={`album art for ${product.title}`}
         />
         <h3 className='pb-2'>{product.title}</h3>
         <p>{price}</p>
@@ -19,10 +22,10 @@ function ProductCard({ product }: { product: any }) {
   )
 }
 
-export default function ShopIndex({ products }: any) {
+function ShopIndex({ products }: any) {
   return (
-    <div className='py-4 px-8 sm:pt-20'>
-      <div className='grid gap-4 grid-cols-4'>
+    <div className='py-4 px-8'>
+      <div className='grid gap-4 grid-cols-2 md:grid-cols-4'>
         {products.map(({ node: product }: { node: any }) => {
           console.log(product)
           return <ProductCard key={product.id} product={product} />
@@ -31,6 +34,10 @@ export default function ShopIndex({ products }: any) {
     </div>
   )
 }
+
+ShopIndex.getLayout = (page: any) => (
+  <NavbarSpacerLayout>{page}</NavbarSpacerLayout>
+)
 
 export async function getStaticProps() {
   const products = await shopifyClient.getAllProducts({
@@ -42,3 +49,5 @@ export async function getStaticProps() {
     props: { products }, // will be passed to the page component as props
   }
 }
+
+export default ShopIndex
