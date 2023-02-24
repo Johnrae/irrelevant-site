@@ -78,7 +78,7 @@ function Event({ event }: EventProps) {
   )
 }
 
-export async function getServerSideProps({ params, previewData }: any) {
+export async function getStaticProps({ params, previewData }: any) {
   const client = createClient({ previewData })
 
   const event = await client.getByUID('event', params.id)
